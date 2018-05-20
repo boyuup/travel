@@ -2,7 +2,7 @@
   <div class="header">
     <div class="header-left"><i class="iconfont">&#xe66f;</i></div>
     <div class="header-input"><i class="iconfont">&#xe619;</i>输入城市/景点/游玩主题</div>
-    <div class="header-right">城市<i class="iconfont">&#xe64a;</i></div>
+    <router-link to="/search"><div class="header-right">{{this.$store.state.city}}<i class="iconfont">&#xe64a;</i></div></router-link>
   </div>
 </template>
 
@@ -36,11 +36,17 @@ export default {
       background:#fff;
       border-radius:.1rem;
       color:#ccc;
+      text-indent: .15rem;
     }
     .header-right{
       width:1.24rem;
       float:right;
+      font-size: .28rem;
       text-align: center;
+      color: #fff;
+      i{
+        font-size:.24rem;
+      }
     }
   }
 </style>
